@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  bot:
+    build: .
+    container_name: vk_booking_bot
+    restart: always
+    env_file:
+      - config/.env
+    volumes:
+      - ./src/booking.db:/app/src/booking.db
+
